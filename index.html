@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Old Rectory, Manton | House History</title>
+<style>
+  :root{
+    --paper:#faf7f0; --ink:#2b2620; --accent:#6b4f2a; --accent-soft:#e9dfc9;
+    --line:#d8cdb4; --muted:#7a6f5d; --card:#ffffff; --uncertain:#a3541f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 80px}
+  header.hero{background:linear-gradient(160deg,#3a3226,#5c4a2e);color:#f5efe0;
+       padding:56px 20px 44px;margin-bottom:36px}
+  header.hero h1{margin:0 0 6px;font-size:2.1rem;letter-spacing:.5px}
+  header.hero p.sub{margin:0;opacity:.85;font-style:italic}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;
+       padding:14px 20px;margin-bottom:32px}
+  nav.toc a{color:var(--accent);text-decoration:none;margin-right:16px;font-size:.95rem}
+  nav.toc a:hover{text-decoration:underline}
+  section{margin-bottom:44px}
+  h2{font-size:1.5rem;border-bottom:2px solid var(--accent);padding-bottom:6px;color:#3a3226}
+  h3{color:#3a3226;margin-bottom:4px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+       padding:18px 22px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.96rem}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--accent-soft);color:#3a3226}
+  .tag{display:inline-block;font-size:.75rem;font-style:normal;background:var(--accent-soft);
+       color:#5c4a2e;border-radius:20px;padding:2px 10px;margin-left:8px;white-space:nowrap}
+  .tag.uncertain{background:#f3e3cf;color:var(--uncertain)}
+  .timeline{position:relative;margin:18px 0 0 8px;padding-left:28px;border-left:3px solid var(--line)}
+  .t-item{position:relative;margin-bottom:22px}
+  .t-item::before{content:"";position:absolute;left:-36px;top:6px;width:12px;height:12px;
+       border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+  .t-date{font-weight:bold;color:var(--accent)}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+  .gallery figure{margin:0;background:var(--card);border:1px solid var(--line);
+       border-radius:10px;overflow:hidden}
+  .gallery img{width:100%;height:170px;object-fit:cover;display:block;background:#e5ddc9}
+  .gallery figcaption{padding:8px 12px;font-size:.85rem;color:var(--muted)}
+  .sources{font-size:.92rem}
+  .sources li{margin-bottom:8px}
+  .gap{background:#fbf3e4;border:1px dashed var(--uncertain);border-radius:10px;
+       padding:14px 18px;margin:10px 0}
+  footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+       color:var(--muted);font-size:.85rem}
+  #gate{position:fixed;inset:0;background:#2b2620;z-index:50;display:flex;
+       align-items:center;justify-content:center;padding:20px}
+  #gate .box{background:var(--paper);border-radius:12px;padding:36px 40px;max-width:420px;
+       width:100%;text-align:center}
+  #gate h2{border:none;margin-top:0}
+  #gate input{font-size:1.2rem;padding:10px 14px;width:100%;margin:14px 0;
+       border:1px solid var(--line);border-radius:8px;text-align:center;letter-spacing:2px}
+  #gate button{font-size:1rem;background:var(--accent);color:#fff;border:none;
+       border-radius:8px;padding:10px 28px;cursor:pointer}
+  #gate button:hover{background:#5c4a2e}
+  #gate .err{color:#a33;min-height:1.4em;font-size:.9rem}
+  #content{display:none}
+</style>
+</head>
+<body>
+
+<div id="gate" role="dialog" aria-label="Passcode protected">
+  <div class="box">
+    <h2>The Old Rectory — House History</h2>
+    <p>This house history is private. Please enter the passcode.</p>
+    <div class="err" id="gateErr"></div>
+    <input id="gateInput" type="password" autocomplete="off" placeholder="passcode"
+           onkeydown="if(event.key==='Enter')checkGate()">
+    <br>
+    <button onclick="checkGate()">Enter</button>
+  </div>
+</div>
+
+<div id="content">
+<header class="hero">
+  <div class="wrap" style="padding-bottom:0">
+    <h1>The Old Rectory</h1>
+    <p class="sub">Manton, North Lincolnshire DN21 4JT — a house history from construction to the present day</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc">
+    <a href="#timeline">Timeline</a>
+    <a href="#ownership">Ownership</a>
+    <a href="#sales">Recorded sales</a>
+    <a href="#occupants">Occupants</a>
+    <a href="#fabric">Fabric</a>
+    <a href="#market-value">Market value</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#sources">Sources &amp; gaps</a>
+  </nav>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <div class="card">
+      <p>The Old Rectory is the <strong>pre-1855 parsonage of Manton</strong> — a stone parsonage of
+      <strong>unproven date</strong> (EPC: pre-1900; sandstone/limestone). It is <strong>not</strong> the
+      1855 Hooker-designed rectory; that replacement building is now known as <strong>Manton Place</strong>.
+      Four bedrooms, one bathroom, two receptions, ~143 sqm, EPC F. Not listed.</p>
+      <p>Its documented residential history runs from the parish clergy (the Dalison family, patrons as well
+      as rectors) through a long schoolmaster chapter — <strong>Alfred Rowbottom, head teacher, and family,
+      c.1898 to at least 1921</strong> — to the modern sales of 2016 (£290,000) and 2020 (£339,000, to
+      Ian and Harriet Cleary).</p>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="t-item"><span class="t-date">Before 1855</span>
+        <span class="tag uncertain">build date unproven</span> — the earlier parsonage of Manton is built;
+        the house now called The Old Rectory. Pre-1900 per EPC (sandstone/limestone). "1800" was the
+        owner's own round-figure declaration to his 2020 buildings insurer — treat as an estimate,
+        <strong>not a researched date</strong>.</div>
+      <div class="t-item"><span class="t-date">1568</span> — <strong>John Robotham</strong>, parson of Manton
+        (accused of missing evening prayers and Easter communion to play bowls — parish context, not
+        proof of residence in this house).</div>
+      <div class="t-item"><span class="t-date">1806</span> — <strong>Enclosure Act for Manton</strong>: tithes
+        commuted for land (National Gazetteer of Great Britain and Ireland, 1868).</div>
+      <div class="t-item"><span class="t-date">1829</span>
+        <span class="tag uncertain">map date</span> — copy map of Manton "after enclosure", 5 inches to
+        40 chains (Hull History Centre U DX229/128). Suggests the enclosure award falls c.1806–1829; the
+        enrolled award (TNA KB 122/1196/rot3068) is not yet examined — it should show the glebe
+        allotment and possibly the parsonage plot.</div>
+      <div class="t-item"><span class="t-date">1855</span> — a handsome new rectory is erected to the designs of
+        J.&nbsp;M.&nbsp;Hooker (per the 12 Sep 2026 report; the specialist source was inaccessible, so this
+        remains the report's claim). This is now <strong>Manton Place</strong>; the subject house becomes
+        "the old rectory".</div>
+      <div class="t-item"><span class="t-date">1861</span> — the parish church of <strong>St Hybald</strong> is
+        rebuilt in limestone by J.&nbsp;M.&nbsp;Hooker and Wheeler of Tunbridge Wells (Grade II).</div>
+      <div class="t-item"><span class="t-date">1868</span> — Manton parish: the living is a rectory valued at
+        <strong>£252</strong>; the church "a modern structure with an open belfry containing one bell";
+        "a village school of recent erection"; <strong>William Dallison, Esq., lord of the manor</strong>
+        (National Gazetteer 1868).</div>
+      <div class="t-item"><span class="t-date">c.1894–1898</span>
+        <span class="tag uncertain">inferred from children's birthplaces</span> — the Rowbottom family arrives
+        in Manton from Wiltshire/Suffolk.</div>
+      <div class="t-item"><span class="t-date">1901</span> (census) — Rowbottom household at
+        <strong>"Old Rectory, Manton"</strong>: Alfred Rowbottom, 41, schoolmaster; wife Betsy, 35; eight
+        children including Kathleen Gladys, 3, born Manton.</div>
+      <div class="t-item"><span class="t-date">1911</span> (census) — Rowbottom household at
+        <strong>"The Old Rectory Manton Kirton Lindsey Lincolnshire"</strong>: Alfred, 51, head teacher;
+        Betsy, 46; children Percival (26, clerk), Lavinia (24, assistant teacher), Evelyn May (17, daily
+        governess), Kathleen Gladys (13, school).</div>
+      <div class="t-item"><span class="t-date">1921</span> (census) — Rowbottom household at
+        <strong>"The Old Rectorn [sic] Manton"</strong>: Alfred, 61, head teacher (Manton School Managers,
+        Lindsey Education Committee); Betsy, 56; Eveline May, 28, assistant teacher; Kathleen Gladys, 23.</div>
+      <div class="t-item"><span class="t-date">13 March 1930</span> — Alfred Rowbottom dies (Glanford Brigg
+        registration district); buried Brigg Cemetery.</div>
+      <div class="t-item"><span class="t-date">1998</span> — St Hybald's church made redundant by the Diocese of Lincoln.</div>
+      <div class="t-item"><span class="t-date">2003</span> — St Hybald's sold for residential use.</div>
+      <div class="t-item"><span class="t-date">14 October 2016</span> — sold for <strong>£290,000</strong>
+        (detached freehold; Land Registry).</div>
+      <div class="t-item"><span class="t-date">23 October 2020</span> — sold for <strong>£339,000</strong> to
+        <strong>Ian and Harriet Cleary</strong> (completion date; HomeProtect policy period begins 23/10/2020,
+        buildings sum insured £339,000).</div>
+      <div class="t-item"><span class="t-date">30 September 2026</span> — open-market value view
+        <strong>£350,000–£420,000, central ~£380,000</strong> (research estimate, not a formal
+        valuation — see <a href="#market-value">Market value</a>).</div>
+    </div>
+  </section>
+
+  <section id="ownership">
+    <h2>Ownership &amp; provenance</h2>
+    <h3>Rectors of Manton <span class="tag">parish context</span></h3>
+    <p>After 1855 the rector would have lived in the new rectory (now Manton Place), so post-1855 names
+    belong to the parish story, not to this house.</p>
+    <table>
+      <tr><th>Dates</th><th>Rector</th><th>Note</th></tr>
+      <tr><td>from 1568</td><td><strong>John Robotham</strong></td><td>Parson; accused of missing evening prayers and Easter communion to play bowls (Maltby, <em>Prayer Book and People</em>)</td></tr>
+      <tr><td>1601</td><td>Thomas Tompson</td><td>Death of predecessor (CCEd)</td></tr>
+      <tr><td>1603–1614</td><td>Zachary Cawdry</td><td></td></tr>
+      <tr><td>1660–1677</td><td>Edward Saunders</td><td></td></tr>
+      <tr><td>1677–1706</td><td>Robert Manton</td><td>The surname matches the village</td></tr>
+      <tr><td>from 1706</td><td>Richard Hill</td><td></td></tr>
+      <tr><td>d. 1737</td><td>Josias Morgan</td><td>Buried at Manton</td></tr>
+      <tr><td>d. 7 Apr 1792</td><td>Thomas Dalyson</td><td>Buried at Manton; the <strong>Dalison/Dallison family held the advowson</strong></td></tr>
+      <tr><td>by 1850–1869</td><td>John Beauvoir Dalison</td><td><strong>Probable last clerical occupant of the old parsonage before the 1855 move</strong> (per the 12 Sep 2026 report; in White's 1856 as "Rev. J.&nbsp;B.&nbsp;Dallison", likely installed in the new rectory)</td></tr>
+    </table>
+    <h3>The schoolmaster chapter</h3>
+    <div class="card">
+      <p>From around 1898 the old parsonage housed the village schoolmaster's family — consistent with the
+      "village school of recent erection" recorded in the 1868 gazetteer. <strong>Alfred Rowbottom</strong>
+      (b. 25 Jun 1859, Brigg; d. 13 Mar 1930) rose from assistant schoolmaster (Brigg 1881; West Lavington,
+      Wiltshire 1891) to schoolmaster and then head teacher at Manton, serving under the Manton School
+      Managers and Lindsey Education Committee. His wife <strong>Betsy</strong> (b. c.1865, Ashby) and their
+      children — including Lavinia and Kathleen Gladys — are recorded at the Old Rectory in the
+      <strong>1901, 1911 and 1921 censuses</strong>: an occupancy spanning at least 23 years.</p>
+      <p style="font-size:.9rem;color:var(--muted)">Census detail via WikiTree transcriptions — a secondary
+      source; the original schedules have not been examined. Kelly's directories 1905/1909/1913 corroborate
+      Alfred at the Old Rectory (per the 12 Sep 2026 report; directories not re-examined).</p>
+    </div>
+    <h3>Modern ownership</h3>
+    <table>
+      <tr><th>Period</th><th>Owner</th><th>Evidence</th></tr>
+      <tr><td>1921 – 2016</td><td><strong>Unknown</strong></td><td>No occupants traced between 1921 and 2016 <span class="tag uncertain">gap</span></td></tr>
+      <tr><td>14 Oct 2016 – 23 Oct 2020</td><td>Owner unknown by name</td><td>Land Registry sale £290,000 (14 Oct 2016); sold again £339,000 (23 Oct 2020)</td></tr>
+      <tr><td>23 Oct 2020 – present</td><td><strong>Ian and Harriet Cleary</strong></td><td>Land Registry £339,000; HomeProtect policy K23/0549284 (period from 23/10/2020)</td></tr>
+    </table>
+  </section>
+
+  <section id="sales">
+    <h2>Recorded sales</h2>
+    <table>
+      <tr><th>Date</th><th>Price</th><th>Type</th><th>Source</th></tr>
+      <tr><td>14 Oct 2016</td><td><strong>£290,000</strong></td><td>Detached freehold</td><td>Land Registry (corroborated by housepricehistory.co.uk DN21 4JT page)</td></tr>
+      <tr><td>23 Oct 2020</td><td><strong>£339,000</strong></td><td>Detached freehold — purchase by Ian and Harriet Cleary</td><td>Land Registry + HomeProtect policy K23/0549284</td></tr>
+    </table>
+    <p>No other open-market sales found on the free sources checked. For neighbourhood context: The Old School
+    House, same postcode, sold 18 Jan 2013 for £415,000 — the schoolhouse that pairs with the Rowbottom story.</p>
+  </section>
+
+  <section id="occupants">
+    <h2>Occupants</h2>
+    <h3>The Rowbottoms <span class="tag">new finding, Sep 2026</span></h3>
+    <div class="card">
+      <p><strong>Alfred Rowbottom</strong> (b. 25 Jun 1859, Brigg; d. 13 Mar 1930, Glanford Brigg district;
+      buried Brigg Cemetery), son of John (shoemaker) and Martha Rowbottom (née Cox) of Brigg.</p>
+      <p>Career arc per the censuses: 1881 — assistant school master (Brigg, living with parents);
+      1891 — assistant schoolmaster (West Lavington, Wiltshire); 1901 — schoolmaster (Manton);
+      1911 — head teacher (Manton); 1921 — head teacher, Manton School Managers, Lindsey Education Committee.</p>
+      <p>Wife <strong>Betsy</strong> (b. c.1865, Ashby, Lincolnshire). Children included Florence (b. c.1884),
+      Arthur Percival (b. c.1885), Herbert Alfred (b. c.1886), Lavinia (b. c.1887), Douglas Walter (b. c.1889),
+      Albert Maurice (b. c.1890), Eveline/Evelyn May (b. c.1894, Thorndon, Suffolk), Kathleen Gladys
+      (b. c.1898, Manton).</p>
+      <p>Inferred move to Manton: between Eveline May's birth (Thorndon, Suffolk, c.1894) and Kathleen
+      Gladys's (Manton, c.1898).</p>
+      <p style="font-size:.9rem;color:var(--muted)">Detail via WikiTree census transcriptions (secondary source —
+      originals not examined); verify against original schedules before treating the 1901/1921 household
+      details as firm.</p>
+    </div>
+    <div class="gap"><strong>Gap:</strong> no occupants traced before c.1898 or between 1921 and 2016 other than
+    the clerical list above. The 1841–1891 censuses were not searchable via FreeCEN (form-based; no submission
+    possible in this environment) and sit behind paywalls elsewhere (Findmypast/Ancestry — owner's call).</div>
+  </section>
+
+  <section id="fabric">
+    <h2>Fabric changes</h2>
+    <div class="card">
+      <p><strong>Documented fabric is thin.</strong> What is known:</p>
+      <ul style="margin:0">
+        <li>Pre-1900 sandstone/limestone walls (EPC); tile roof; no cellar; not listed; not in a conservation
+          area per the 2020 Statement of Fact (not independently verified) — HomeProtect Statement of Fact, Oct 2020.</li>
+        <li>EPC rating <strong>F</strong>.</li>
+        <li>No documented extensions, repairs or alterations found in the sources checked — a genuine gap.
+          The 2016 and 2020 sale particulars (not found in Gmail; the owner may hold paper copies) would be
+          the best source for fabric changes.</li>
+      </ul>
+    </div>
+  </section>
+
+<section id="market-value">
+  <h2>Market value <span class="tag">estimate, Sep 2026</span></h2>
+  <div class="card">
+    <p><strong>Open-market value estimate (late September 2026): £350,000 – £420,000,
+    central view ~£380,000.</strong></p>
+    <p>At ~143 sqm this implies roughly £2,450–£2,940/sqm. This is a research-based
+    estimate compiled from Land Registry sold prices and live asking data — it is
+    <strong>not</strong> a formal valuation. Confidence is moderate: in-village
+    evidence is thin and the house's condition is unconfirmed.</p>
+  </div>
+
+  <h3>How the range was reached</h3>
+  <div class="card">
+    <p><strong>Best in-village anchor: Pathways, Manton</strong> — a 4-bed detached
+    house in the same postcode (DN21 4JT), sold for <strong>£412,500 in December
+    2021</strong> (PropertyMarketIntel; Land Registry). December 2021 was near the
+    market peak. Since then the regional picture is flat-to-soft: ONS shows North
+    Lincolnshire +4.5% year-on-year (Jul 2026 vs Jul 2025, all types), but
+    detached-specific sold prices are −2.3% year-on-year per OnTheMarket (avg
+    £279k), and Bricks&amp;Logic says similar properties in this postcode have
+    dropped 10.5% since March 2020.</p>
+    <p>A time adjustment of roughly flat to −5% puts an equivalent in-order 4-bed
+    in Manton today at ~£390–415k. The Old Rectory then takes a discount for its
+    <strong>EPC F</strong> (lender/letting constraints, running costs — typically a
+    5–10% penalty versus an EPC C/D comparable) and its modest 143 sqm internal
+    area for a 4-bed rectory, plus unknown decorative condition. Applying ~5%
+    gives ~£380k.</p>
+  </div>
+
+  <h3>Comparable sold prices</h3>
+  <table>
+    <tr><th>Comparable</th><th>Area</th><th>Sale price</th><th>Sale date</th><th>Type</th></tr>
+    <tr><td><strong>Pathways</strong> <span class="tag">star comp</span></td><td>Manton (same postcode)</td><td>£412,500</td><td>Dec 2021</td><td>4-bed detached, freehold</td></tr>
+    <tr><td>8 East Cross Street</td><td>Kirton in Lindsey</td><td>£450,000</td><td>Aug 2025</td><td>Detached, freehold (period street)</td></tr>
+    <tr><td>12 Elizabeth Close</td><td>Scotter</td><td>£430,000</td><td>Dec 2025</td><td>Detached, freehold</td></tr>
+    <tr><td>58 The Meadows</td><td>Messingham</td><td>£396,000</td><td>Jan 2026</td><td>Detached, freehold (modern estate)</td></tr>
+    <tr><td>56 The Meadows</td><td>Messingham</td><td>£365,000</td><td>May 2026</td><td>Detached, freehold (modern estate)</td></tr>
+    <tr><td>12 Highgrove</td><td>Messingham</td><td>£360,000</td><td>Oct 2025</td><td>Detached, freehold</td></tr>
+    <tr><td>8 Grove Street</td><td>Kirton in Lindsey</td><td>£330,000</td><td>Nov 2024</td><td>Detached, freehold</td></tr>
+    <tr><td>39 Knightsbridge Road</td><td>Messingham</td><td>£325,000</td><td>Oct 2024</td><td>Detached, freehold</td></tr>
+    <tr><td>12a East Cross Street</td><td>Kirton in Lindsey</td><td>£325,000</td><td>Jan 2026</td><td>Detached, freehold (period street)</td></tr>
+    <tr><td>51 Dunstan Villas</td><td>Kirton in Lindsey</td><td>£315,000</td><td>Mar 2025</td><td>Detached, freehold</td></tr>
+    <tr><td>12 Lark Rise</td><td>Scotter</td><td>£290,000</td><td>Mar 2026</td><td>4-bed detached, freehold</td></tr>
+    <tr><td>36 Rooklands</td><td>Scotter</td><td>£275,000</td><td>Jul 2025</td><td>Detached, freehold</td></tr>
+    <tr><td>20 The Rookery</td><td>Scotter</td><td>£495,000</td><td>Nov 2025</td><td>4-bed detached, 285 sqm, freehold</td></tr>
+  </table>
+  <p style="font-size:.9rem;color:var(--muted)">Sources: Land Registry via housepricehistory.co.uk (index, crawled Sep 2026); PrimeLocation for 20 The Rookery; PropertyMarketIntel DN21 4JT (Pathways + Old Rectory history). Bedroom counts are not in Land Registry data — bedroom detail only where agents list it. East Cross Street is a Victorian period street, which strengthens the two comps there.</p>
+
+  <h3>Asking-price context</h3>
+  <div class="card">
+    <p>Village 4-bed detached houses currently on the market via OnTheMarket sit at
+    <strong>£325k–£475k</strong> (read 30 Sep 2026): High Street, Snitterby £475k
+    (oiro); Mill Court, Waddingham £400k+ (oieo); Spa Hill, Kirton in Lindsey
+    £390k+ (o/o); Selby Close, Kirton in Lindsey £400–425k; High Street, Scotter
+    5-bed 19th-c former farmhouse £425k+ (o/o); Holme Lane, Bottesford £375k;
+    Saxon Way, Ingham £375k; Walkerith Road, Morton £365k; Gainsborough Road,
+    Lea £370k (reduced); Morton Road £325k; High Street, Messingham £310k.
+    Kirton in Lindsey live 4-bed asking median is £335,000 (home.co.uk, to 26 Sep
+    2026). The £380k centre sits comfortably mid-range; a renovated,
+    EPC-improved Old Rectory could press toward the £400k+ askers — hence the
+    £420k top.</p>
+  </div>
+
+  <h3>Local market context, 2026</h3>
+  <div class="card">
+    <ul style="margin:0">
+      <li>ONS: North Lincolnshire avg £180,000 (Jul 2026, provisional), +4.5% YoY; detached £252,000.</li>
+      <li>OnTheMarket (Land Registry sold): detached avg North Lincolnshire £279,000, <strong>−2.3% YoY</strong>; Kirton in Lindsey £253,000 (+6.4% YoY); Messingham £228,000 (−5.2% YoY); Hibaldstow £292,000 (+11.4% YoY) — mixed, town-level swings are large; the rural premium end is softening.</li>
+      <li>Time to sell is long: home.co.uk (live, Sep 2026) — Kirton in Lindsey 4-bed avg 149 days on market; Gainsborough avg 122 days (median 94); only 8% of Kirton listings sell in under a month. Detached in North Lincolnshire avg ~180 days on market.</li>
+      <li>Direction of travel: flat-to-soft for larger rural period homes; price reductions are appearing (e.g. the Lea listing reduced within 14 days).</li>
+    </ul>
+  </div>
+
+  <h3>Caveats</h3>
+  <div class="gap">
+    <ul style="margin:0">
+      <li>No sales at all in DN21 4JT since Dec 2021 (only 5 transactions in 10 years) — Manton-specific evidence is thin; the Pathways comp is nearly 5 years old.</li>
+      <li>Condition, grounds size, outbuildings and renovation level of the subject are unknown — the range assumes average decorative order with EPC F; a refurbished/EPC-upgraded house could justify the top end, poor condition the bottom.</li>
+      <li>No Zoopla/Rightmove automated estimate was obtainable (signed-out session; Bricks&amp;Logic's page for this address renders as a JS shell).</li>
+    </ul>
+  </div>
+  <p style="font-size:.9rem;color:var(--muted)">Full research with per-source notes: compiled 30 Sep 2026.
+  Sources: ONS housing prices in North Lincolnshire; housepricehistory.co.uk (Land Registry mirror);
+  PrimeLocation; PropertyMarketIntel; OnTheMarket; home.co.uk; Bricks&amp;Logic.</p>
+</section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <figure>
+        <img src="aerial-2020.png" alt="Aerial view of The Old Rectory, Manton, with the plot outlined in yellow">
+        <figcaption>Aerial view with the plot outlined in yellow — the owner's Bing Maps screenshot, 6 Oct 2020, from the house-hunting period. Not historical.</figcaption>
+      </figure>
+    </div>
+    <div class="card"><strong>No historic photographs of the Old Rectory have been found yet.</strong>
+    The paired iPhone was offline when the photo library was checked — worth re-searching when it is
+    online. Documents held by the owner but not published here: the 12 Sep 2026 house history report and
+    the HomeProtect buildings policy (K23/0549284).</div>
+  </section>
+
+  <section id="sources">
+    <h2>Sources &amp; gaps</h2>
+    <h3>Sources</h3>
+    <ol class="sources">
+      <li>WikiTree, Alfred Rowbottom (1859–1930) — census transcriptions 1881/1891/1901/1911/1921; birth/death/burial. <a href="https://www.wikitree.com/wiki/Rowbottom-335">wikitree.com/wiki/Rowbottom-335</a> <span class="tag uncertain">secondary source</span></li>
+      <li>GenUKI, Manton, Lincolnshire (National Gazetteer 1868 excerpt). <a href="https://WWW.genuki.org.uk/big/eng/LIN/Manton">genuki.org.uk/big/eng/LIN/Manton</a></li>
+      <li>Wikipedia, Manton, Lincolnshire. <a href="https://en.wikipedia.org/wiki/Manton,_Lincolnshire">en.wikipedia.org/wiki/Manton,_Lincolnshire</a></li>
+      <li>Hull History Centre catalogue, U DX229/128 (1829 copy map of Manton after enclosure). <a href="https://catalogue.hullhistorycentre.org.uk/catalogue/U-DX229-128">catalogue.hullhistorycentre.org.uk</a></li>
+      <li>housepricehistory.co.uk, DN21 4JT — Old Rectory sales 14 Oct 2016 £290,000; 23 Oct 2020 £339,000; The Old School House 18 Jan 2013 £415,000.</li>
+      <li>housepricesintheuk.co.uk, PATHWAYS DN21 4JT page (Manton Place address existence). <a href="https://www.housepricesintheuk.co.uk/h/PATHWAYS--GAINSBOROUGH-DN21+4JT">housepricesintheuk.co.uk</a></li>
+      <li>Google Books, White's 1872 Lincolnshire (full view), volume <em>VplQAAAAYAAJ</em> — Manton entry at p. 461 (located; full text not extracted).</li>
+      <li>CCEd location ID 8317 (Manton, Lincolnshire). <a href="https://theclergydatabase.org.uk/jsp/locations/index.jsp?locKey=8317">theclergydatabase.org.uk</a> (via the 12 Sep 2026 report)</li>
+      <li>The 12 Sep 2026 house history report (owner's Google Drive).</li>
+      <li>HomeProtect policy K23/0549284 emails (Gmail, 19 Oct 2020).</li>
+      <li>Market-value research, 30 Sep 2026: see <a href="#market-value">Market value</a> for per-source links.</li>
+    </ol>
+    <h3>Known gaps</h3>
+    <div class="gap"><ol style="margin:0">
+      <li><strong>Lincolnshire Archives (pending):</strong> enclosure award/map (TNA enrolment KB 122/1196/rot3068 is the backup), glebe terriers, parsonage papers, 1861 faculty papers, parsonage sale files for both rectories, Dalison advowson papers — enquiries of 17 Sep 2026 acknowledged 24 Sep; a study-table visit (or paid research) is likely needed as the online catalogue is buggy.</li>
+      <li><strong>Census 1841–1891:</strong> who lived in the old parsonage between the clergy and the Rowbottoms; whether John Beauvoir Dalison occupied it pre-1855. FreeCEN requires form submission (not possible here); Findmypast/Ancestry are paid — owner's call.</li>
+      <li><strong>White's 1856 p. 601 and 1872 p. 461</strong> — read the full Manton entries from the originals.</li>
+      <li><strong>The Hooker/Manton Place link</strong> — the specialist article denied access (403); the 1855-Hooker claim rests on the 12 Sep 2026 report.</li>
+      <li><strong>Title register</strong> — the owner's order was in progress at the time of the 12 Sep report; the register would give the modern ownership chain and any historic covenants.</li>
+      <li><strong>Pre-2016 ownership</strong> — conveyancing bundle from the 2020 purchase (estate agent particulars, completion statement) was not found in Gmail; the owner may hold paper copies.</li>
+      <li><strong>Device photo library</strong> — no device photos were accessible (paired iPhone offline); any historic photos from the 2016 or 2020 sale particulars remain the best source for fabric changes.</li>
+    </ol></div>
+    <div class="card"><strong>A note on method:</strong> every dated claim on this page
+    cites a source. Where the evidence is thin or second-hand, it is marked
+    <span class="tag uncertain">uncertain</span>. Family lore is labelled as such.
+    Nothing here is invented.</div>
+  </section>
+
+  <footer>
+    Compiled 30 September 2026 for the owner. Private family history — please do not
+    republish without permission.
+  </footer>
+</div>
+</div>
+
+<script>
+(function(){
+  var PASS = "thurs0";
+  function open(){document.getElementById('gate').style.display='none';
+    document.getElementById('content').style.display='block';
+    try{sessionStorage.setItem('hh_auth','1');}catch(e){}}
+  window.checkGate = function(){
+    var v = document.getElementById('gateInput').value;
+    if(v === PASS){ open(); }
+    else { document.getElementById('gateErr').textContent = 'That passcode did not match — try again.';
+           document.getElementById('gateInput').value=''; }
+  };
+  try{ if(sessionStorage.getItem('hh_auth')==='1'){ open(); } }catch(e){}
+  setTimeout(function(){document.getElementById('gateInput').focus();},100);
+})();
+</script>
+</body>
+</html>
